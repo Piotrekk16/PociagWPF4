@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication20.MainWindow"
+        Title="Aplikacja - Pociąg" Height="350" Width="700">
+    <Grid>
+        <Button x:Name="DodajLokomotywe" Content="Dodaj lokomotywe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="206" Margin="19,29,0,0" Click="DodajLokomotywe_Click"/>
+        <Button x:Name="DodajWagon" Content="Dodaj wagon" HorizontalAlignment="Left" Margin="19,64,0,0" VerticalAlignment="Top" Width="206" RenderTransformOrigin="-1.693,-1.55" Click="DodajWagon_Click"/>
+        <Button x:Name="SprawdzPociag" Content="Sprawdź, czy pociąg może jechać!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="206" Margin="19,99,0,0" Height="27" Click="SprawdzPociag_Click" />
+        <Grid x:Name="PanelLokomotywa" HorizontalAlignment="Left" Height="169" Margin="19,140,0,0" VerticalAlignment="Top" Width="206" d:IsHidden="True">
+            <Label Content="Model" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+            <Label Content="Masa" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="ModelL" HorizontalAlignment="Left" Height="23" Margin="76,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MasaL" HorizontalAlignment="Left" Height="23" Margin="76,75,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="DodajL" Content="Dodaj" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="75" Click="DodajL_Click"/>
+            <Button x:Name="UkryjL" Content="Ukryj" HorizontalAlignment="Left" Margin="121,124,0,0" VerticalAlignment="Top" Width="75" Click="Ukryj_Click"/>
+        </Grid>
+        <Grid x:Name="PanelWagon" HorizontalAlignment="Left" Height="169" Margin="19,140,0,0" VerticalAlignment="Top" Width="206">
+            <Label Content="Model" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Masa" HorizontalAlignment="Left" Margin="16,41,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="ModelW" HorizontalAlignment="Left" Height="23" Margin="76,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="MasaW" HorizontalAlignment="Left" Height="23" Margin="76,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="DodajW" Content="Dodaj" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="75" Click="DodajW_Click"/>
+            <Button x:Name="UkryjW" Content="Ukryj" HorizontalAlignment="Left" Margin="121,139,0,0" VerticalAlignment="Top" Width="75" Click="Ukryj_Click"/>
+            <Label Content="Rodzaj/Ładunek" HorizontalAlignment="Left" Margin="0,108,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="RodzajLadunek" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Margin="100,108,0,0"/>
+            <Label Content="Typ" HorizontalAlignment="Left" Margin="16,77,0,0" VerticalAlignment="Top"/>
+            <ComboBox x:Name="Typ" HorizontalAlignment="Left" Margin="67,77,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBoxItem Content="Osobowy" HorizontalAlignment="Left" Width="118"/>
+                <ComboBoxItem Content="Towarowy" HorizontalAlignment="Left" Width="118"/>
+            </ComboBox>
+        </Grid>
+        <TextBlock x:Name="SkladPociagu" HorizontalAlignment="Left" Height="280" Margin="256,29,0,0" TextWrapping="Wrap"  Text="Skład pociągu jest pusty :-(" VerticalAlignment="Top" Width="403"/>
+
+    </Grid>
+</Window>
